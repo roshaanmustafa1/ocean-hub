@@ -6,6 +6,9 @@ import LoginView from "../pages/LoginView";
 import AboutView from "../pages/AboutView";
 import ContactUsView from "../pages/ContactUsView";
 import ShopView from "../pages/ShopView";
+import CartPage from "../pages/CartPage";
+import CheckOut from "../pages/CheckOut";
+
 
 const Layout = () => {
   return (
@@ -26,6 +29,8 @@ const Router = () => {
           <Route path="/about" element={<AboutView />} />
           <Route path="/contact-us" element={<ContactUsView />} />
           <Route path="/shop" element={<ShopView />} />
+          <Route path="/cartpage" element={<CartPage/>}/>
+          <Route path="/checkout" element={<CheckOut/>}/>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
