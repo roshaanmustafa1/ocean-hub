@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   Disclosure,
   DisclosureButton,
@@ -46,13 +47,13 @@ function Navbar({ children }) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <div className="shrink-0">
+              <Link to="/"> <div className="shrink-0">
                   <img
                     alt="Your Company"
                     src="/assets/logo-horizontal.svg"
                     className="size-8 w-[120px]"
                   />
-                </div>
+                </div></Link> 
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
@@ -77,6 +78,7 @@ function Navbar({ children }) {
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
+                  <Link to="/cartpage">
                   <button
                     type="button"
                     className="relative rounded-full bg-transparent p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -86,6 +88,7 @@ function Navbar({ children }) {
                       className="size-6 text-gray-800"
                     />
                   </button>
+                  </Link>
                   <span className="inline-flex items-center rounded-full bg-gray-800 mb-7 -ml-4 z-10 px-2 py-1 text-xs font-medium text-gray-100 ring-1 ring-inset ring-gray-500/10">
                     3
                   </span>
@@ -175,6 +178,7 @@ function Navbar({ children }) {
                     {user.email}
                   </div>
                 </div>
+                <Link to="/cartpage">
                 <button
                   type="button"
                   className="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -183,6 +187,7 @@ function Navbar({ children }) {
                   <span className="sr-only">View notifications</span>
                   <ShoppingBagIcon aria-hidden="true" className="size-6" />
                 </button>
+                </Link>
                 <span className="inline-flex items-center rounded-full z-10 bg-gray-50 mb-7 -ml-4 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                   3
                 </span>
